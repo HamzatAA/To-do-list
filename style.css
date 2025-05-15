@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background: linear-gradient(to right bottom, #131c61, #4d075f);
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #131c61;
+}
+
+h1 img{
+    width: 30px;
+    height: 30px;
+}
+
+.todo_list{
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form{
+    display: flex;
+    background: #edeef0;
+    border-radius: 40px;
+    margin-top: 1rem;
+}
+
+.todo_list input{
+    outline: none;
+    border: none;
+    background: #edeef0;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 1rem;
+
+}
+
+.todo_list button{
+    color: #fff;
+    background: #ff5845;
+    outline: none;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border: #ff5845 2px solid;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.todo_list button:hover{
+    background: #fff;
+    color: #ff5845;
+}
+
+.todo_list ul{
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.todo_list ul li{
+    font-size: 1rem;
+    padding: 12px 10px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo_list ul li::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 15px;
+    top: 10px;
+    background-image: url(assets/radio.png);
+   
+}
+
+.todo_list ul li.checked{
+    color: #d5d8dc;
+    text-decoration: line-through;
+}
+
+.todo_list ul li.checked::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 15px;
+    top: 10px;
+    background-image: url(assets/correct.png);
+}
+
+.todo_list ul li span{
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    width: 24px;
+    height: 24px;
+    font-size: 1.2rem;
+    color: #ff5845;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem;
+}
+
+.todo_list ul li span:hover{
+    background: #ff5845;
+    color: #fff;
+    cursor: pointer;    
+}
